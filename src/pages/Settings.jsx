@@ -44,7 +44,7 @@ const SettingsPage = () => {
   const handleUpdate = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.put('http://localhost:5000/api/auth/me', newDetails, {
+      await axios.put('https://startupprojectbackend.onrender.com/api/auth/me', newDetails, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -61,7 +61,7 @@ const SettingsPage = () => {
     console.log("New Password: ", newPassword);  // Log new password
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.put('http://localhost:5000/api/auth/update-password', {
+      const response = await axios.put('https://startupprojectbackend.onrender.com/api/auth/update-password', {
         password: oldPassword,  // Ensure the key is 'password' not 'oldPassword'
         newPassword: newPassword,
       }, {
