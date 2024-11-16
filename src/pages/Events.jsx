@@ -30,7 +30,7 @@ const Events = () => {
   const handleDelete = async (eventId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/events/${eventId}`, {
+      await axios.delete(`https://startupprojectbackend.onrender.com/api/events/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEvents((prevEvents) => prevEvents.filter((event) => event._id !== eventId));
@@ -65,7 +65,7 @@ const Events = () => {
                 {/* Event Image */}
                 {event.image && (
                   <img
-                    src={`http://localhost:5000/${event.image}`}
+                    src={`https://startupprojectbackend.onrender.com/${event.image}`}
                     alt={event.title}
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
