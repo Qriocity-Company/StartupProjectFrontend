@@ -11,7 +11,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     if (!socketRef.current) {
-      socketRef.current = io("http://localhost:5000");
+      socketRef.current = io("https://startupprojectbackend.onrender.com/");
       console.log("Socket initialized");
 
       socketRef.current.on("connect", () => {

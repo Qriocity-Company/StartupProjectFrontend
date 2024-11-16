@@ -35,7 +35,7 @@ const CreatePost = () => {
     formData.append('image', image);
     formData.append('tags', JSON.stringify(tags));
     try {
-      await axios.post('http://localhost:5000/api/posts', formData);
+      await axios.post('https://startupprojectbackend.onrender.com/api/posts', formData);
       navigate('/home');
     } catch (err) {
       console.error(err);

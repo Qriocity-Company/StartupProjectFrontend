@@ -31,7 +31,7 @@ const CreateEvent = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/events/create', formData, {
+      await axios.post('https://startupprojectbackend.onrender.com/api/events/create', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

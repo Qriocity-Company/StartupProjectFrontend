@@ -25,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/posts");
+        const res = await axios.get("https://startupprojectbackend.onrender.com/api/posts");
         setPosts(res.data);
       } catch (err) {
         console.error("Error fetching posts:", err);
@@ -45,7 +45,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`);
+      await axios.delete(`https://startupprojectbackend.onrender.com/api/posts/${id}`);
       setPosts(posts.filter((post) => post._id !== id));
     } catch (err) {
       console.error("Error deleting post:", err);
@@ -60,7 +60,7 @@ const Home = () => {
   const submitComment = async (postId) => {
     if (!commentText.trim()) return;
     try {
-      const res = await axios.post(`http://localhost:5000/api/posts/${postId}/comments`, {
+      const res = await axios.post(`https://startupprojectbackend.onrender.com/api/posts/${postId}/comments`, {
         comment: commentText,
       });
       // Update the specific post's comments in the state

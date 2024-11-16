@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { IoIosNotifications } from "react-icons/io";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000/");
+const socket = io("https://startupprojectbackend.onrender.com/");
 
 const Notification = () => {
   const [isOpen, setIsOpen] = useState(false); // Start closed

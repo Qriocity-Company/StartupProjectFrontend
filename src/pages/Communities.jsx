@@ -15,7 +15,7 @@ const Communities = () => {
     const fetchCommunities = async () => {
       try {
         setLoading(true);
-        const res = await axios.get('http://localhost:5000/api/communities');
+        const res = await axios.get('https://startupprojectbackend.onrender.com/api/communities');
         setCommunities(res.data);
         setLoading(false);
       } catch (err) {
@@ -31,7 +31,7 @@ const Communities = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        `http://localhost:5000/api/communities/join/${communityId}`,
+        `https://startupprojectbackend.onrender.com/api/communities/join/${communityId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -52,7 +52,7 @@ const Communities = () => {
     try {
       const token = localStorage.getItem('token');
       const res = await axios.delete(
-        `http://localhost:5000/api/communities/${communityId}`,
+        `https://startupprojectbackend.onrender.com/api/communities/${communityId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setCommunities((prevCommunities) =>
