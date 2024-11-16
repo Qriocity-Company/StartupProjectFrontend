@@ -135,7 +135,7 @@ const Home = () => {
               className="bg-white bg-opacity-90 p-4 rounded-lg shadow-lg"
             >
               <img
-                src={`http://localhost:5000/${post.image}`}
+                src={`https://startupprojectbackend.onrender.com/${post.image}`}
                 alt={post.title}
                 className="w-full h-64 object-cover rounded-lg"
               />
