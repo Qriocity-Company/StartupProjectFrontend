@@ -103,7 +103,7 @@ const Communities = () => {
               >
                 {/* Community Image */}
                 <img
-                  src={`http://localhost:5000/${community.image}`}
+                  src={`https://startupprojectbackend.onrender.com/${community.image}`}
                   alt="Community"
                   className="w-full h-40 object-cover rounded-lg"
                 />
